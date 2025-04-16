@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Edge Cases"
-date:   2020-04-13 17:04:01
+title:  "How waves modify TKE in surface boundary layers"
+date:   2025-03-25 
 categories: post
 ---
 Some edge cases and cautionary examples on using Markdown for writing content using this theme. In particular, list syntax can really knot things up.
