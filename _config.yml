@@ -1,0 +1,28 @@
+
+title: Your Name
+description: Oceanographer and researcher
+baseurl: "" # leave blank for root
+url: "https://yourusername.github.io"
+theme: tufte-jekyll
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+permalink: /blog/:year/:month/:day/:title/
+
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: page
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
