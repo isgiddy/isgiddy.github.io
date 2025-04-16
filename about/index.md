@@ -4,14 +4,25 @@ title: about
 order: 2
 ---
 
-testing
+Hi,   
 
-The *Tufte-Jekyll* theme is a natural extension of the work done by [Edward Tufte](https://github.com/edwardtufte/tufte-css) and his collaborators on Github who created a CSS file that allows web writers to use the same simple and elegant style employed in his published materials.
+I am a physical oceanographer who is curious about how winds and waves drive mixing in the ocean surface boundary layer.   
 
-To incorporate these styles into a Jekyll theme, I have made some very slight modifications that attempt to maintain the feel of the CSS styles in his Github repo.
+{% newthought "Interesting things happen at boundaries."%} At the air-sea interface, communication between the atmosphere and ocean takes place through turbulence. This turbulence modulates the exchange of momentum, heat, carbon, and other scalars, which in turn regulates our climate and the planets energetic balance.   
 
-Note that this is a full-width layout. This was accomplished by including ```layout: full-width``` in the YAML front matter for this page. Keep in mind that all the Tufte-Jekyll sidenote and marginnote goodness will not work on full-width layouts! 
+I observe the ocean using autonomous robots that profile through the ocean or navigate the surface. I use numerical simulations to interpret these observations and learn about turbulence. We can then learn how turbulence impacts our climate and earth system but applying the turbulence theory, via parameterizations, to regional or climate models.     
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll).
+Science is essentially addressing hypotheses using an established method that results in robust logical reasoning in order to reach conclusions. E.g:  
+
+`If P, then Q. We observe Q does not hold, not Q. Therefore not P.`     
+
+*We don't do science in a silo.* 
+
+Science is what I spend most of my time doing, but I live in society. And in society we are part of our politics. I aim to engender good scientific practices to move forward our knowledge and innovation, while acknowledging and engaging with the contemporary challenges that we all face. Such as issues relating to climate, adaptation and resilience, geopolitics and culture.     
+
+
+
+
+
 
 
