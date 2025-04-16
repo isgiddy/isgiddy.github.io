@@ -1,6 +1,7 @@
 ---
 layout: full-width
 title: About
+order: 1
 ---
 
 testing
