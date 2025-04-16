@@ -2,7 +2,8 @@
 layout: post
 title:  "How waves modify TKE in surface boundary layers"
 date:   2025-03-25 
-categories: post
+categories: 
+        - research
 ---
 Some edge cases and cautionary examples on using Markdown for writing content using this theme. In particular, list syntax can really knot things up.
 <!--more-->

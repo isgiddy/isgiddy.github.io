@@ -1,14 +1,14 @@
 ---
 layout: full-width
-title: Research
-order: 1
-# Note that this index page uses a full-width layout!
+title: Musings
+permalink: /musings/
+order: 3
 ---
 
 <h1 class="content-listing-header sans"></h1>
 <ul class="content-listing">
   {% for post in site.posts %}
-    {% if post.categories contains "research" %}
+    {% if post.categories contains "musings" %}
       <li class="listing">
         <hr class="slender">
         <a href="{{ post.url | relative_url }}">
@@ -21,5 +21,3 @@ order: 1
     {% endif %}
   {% endfor %}
 </ul>
-
-
