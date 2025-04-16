@@ -2,7 +2,7 @@
 layout: default
 title: CV
 permalink: /cv/
-order: 4
+order: 5
 ---
 
 ### Education

@@ -1,7 +1,7 @@
 ---
 layout: full-width
 title: about
-order: 1
+order: 2
 ---
 
 testing
