@@ -1,13 +1,12 @@
-
-title: Your Name
-description: Oceanographer and researcher
-baseurl: "" # leave blank for root
+title: nzululwazi
+description: Ocean of knowledge – Research and reflections on oceanography
+baseurl: "" 
 url: "https://yourusername.github.io"
-theme: tufte-jekyll
+remote_theme: clongworth/tufte-jekyll
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-permalink: /blog/:year/:month/:day/:title/
+  - jekyll-remote-theme
 
 collections:
   pages:
