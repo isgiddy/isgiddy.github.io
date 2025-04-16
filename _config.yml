@@ -2,7 +2,7 @@ title: nzululwazi
 description: Ocean of knowledge – Research and reflections on oceanography
 baseurl: "" 
 url: "https://isgiddy.github.io/nzululwazi"
-remote_theme: clongworth/tufte-jekyll
+remote_theme: clayh53/tufte-jekyll
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
