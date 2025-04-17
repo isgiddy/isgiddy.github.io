@@ -16,7 +16,7 @@ order: 3
         </a>
         <br>
         <span class="smaller">{{ post.date | date: "%B %-d, %Y" }}</span><br/>
-        <div>{{ post.excerpt }}</div>
+        <div>{{ post.excerpt | strip_html | truncatewords: 40}}</div>
       </li>
     {% endif %}
   {% endfor %}

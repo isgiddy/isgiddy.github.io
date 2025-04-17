@@ -8,6 +8,11 @@ order: 1
 <h1 class="content-listing-header sans" style="text-align: center;">I.S. Giddy</h1>
 <h4 class="content-listing-header sans" style="text-align: center;">ocean turbulence, observational oceanography, earth system science</h4>
 
+<!-- Full-width image -->
+<div style="margin: 1rem 0;">
+  <img src="{{ '/assets/img/research-banner.png' | relative_url }}" alt="Research banner" style="width: 100%; height: auto; display: block;">
+</div>
+
 <ul class="content-listing">
   {% for post in site.posts %}
     {% if post.categories contains "research" %}
@@ -18,7 +23,8 @@ order: 1
         </a>
         <br>
         <span class="smaller">{{ post.date | date: "%B %-d, %Y" }}</span><br/>
-        <div>{{ post.excerpt }}</div>
+        <div>{{post.excerpt | strip_html | truncatewords: 20 }}
+        </div>
       </li>
     {% endif %}
   {% endfor %}

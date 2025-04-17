@@ -14,7 +14,7 @@ In the winter it is the water that makes up the mixed layer and it thus cold fro
 
 During summer, this winter water layer warms and erodes, changes its density class and mixes with the waters above and below. It is thus a key mediator of water mass transformation and is thought to to be intermediary water in the pathway of water transformation from Circumpolar Deep Water to Antarctic Intermediate Water. 
 
-{% marginfigure 'mf-id-mr' 'assets/img/winter_water/microrider_slocum.png' 'Rocklands Scientific, “A slocum with a microrider”'%}
+{% marginfigure 'mf-id-mr' 'assets/img/winter_water/slocum_mr.png' '“A slocum with a microrider”, *Sarah Nicholson*'%}
 
 The question addressed with this study is what physical process drives the warming of winter water in the summer time. We used exciting and novel observations of microstructure shear. 
 
@@ -71,7 +71,7 @@ As a bonus, this excerpt regarding the use of headings provides an example of us
 [It is] notable that the Feynman lectures (3 volumes) write about all of physics in 1800 pages, using only 2 levels of hierarchical headings: chapters and A-level heads in the text. It also uses the methodology of *sentences* which then cumulate sequentially into *paragraphs*, rather than the grunts of bullet points. Undergraduate Caltech physics is very complicated material, but it didn’t require an elaborate hierarchy to organize.
 <cite>[http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000hB](http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000hB)</cite>
 ```
-
+{% sidenote 'two' '<cite>[http://www.edwardtufte.com/tufte/books_be](http://www.edwardtufte.com/tufte/books_be)<cite>'%},
 
 
 {% newthought 'In his later books' %}{% sidenote 'two' '[http://www.edwardtufte.com/tufte/books_be](http://www.edwardtufte.com/tufte/books_be)'%}, Tufte starts each section with a bit of vertical space, a non-indented paragraph, and sets the first few words of the sentence in small caps. To accomplish this using this style, enclose the sentence fragment you want styled with small caps in a custom Liquid tag called 'newthought' like so:
