@@ -5,9 +5,46 @@ date:   2025-03-25
 categories: 
         - research
 ---
-Some edge cases and cautionary examples on using Markdown for writing content using this theme. In particular, list syntax can really knot things up.
-<!--more-->
 
+Wind stress at the ocean surface transfers momentum into the ocean surface boundary layer. It also forces the creation of waves. Waves themselves break and transfer momentum into the ocean. An interesting interaction between the wind driven current and the wave driven current, known as Stokes drift, results in the formation of Langmuir cells and Langmuir turbulence. Langmuir cells are counter-rotating vortices in the near surface ocean that are aligned with the direction of the wind. Their presence is often seen in the ocean as parallel convergence lines of foam or seaweed.{% sidenote 'one' '[Langmuir, 1938](http://www.doi.org/10.1126/science.87.2250.119)'%}, 
+
+So, Langmuir cells modify the organisation of flow in the upper ocean. But also the distribution of turbulence kinetic energy. 
+
+In this work, we use observations of the turbulence dissipation rate of TKE and realistically forced simulations of the surface boudnary layer in the Southern Ocean to start to unpack how wind-wave interactions modify TKE. 
+
+## The formation of Langmuir Cells
+
+The schematic below gives an idea of how Langmuir Cells are formed when vertical vorticity is tilted to the horizontal due to Stokes drift.{% sidenote 'two' '[Craik & Leibovich, 1976](http://www.doi.org/10.1017/S0022112076001420)'%} <br>
+<br>
+
+{% maincolumn 'assets/img/waves/formation_of_langmuir_cells.png' '“Schematic depicting the interaction between winds and waves and the formation of Langmuir cells and Langmuir turbulence, Isabelle Giddy”'%}
+
+The presence of Langmuir turbulence tends to enhance turbulence in the ocean 
+{% sidenote 'three' '[Mcwilliams et al, 1997](https://doi.org/10.1017/S0022112096004375), [DAsaro et al., 2014](https://doi.org/10.1002/2013GL058193)'%} when winds and waves are aligned, thus being an important component of the energetic balance in the surface boundary layer. However, this enhanced turbulence is not always observed. A number of studies show that predictions of turbulence dissipation based on a shear production model that only takes into account wind stress well-represents observations, with wave adjusted models at times explaining less of the variability {% sidenote 'four' '[Esters et al., 2018](https://doi.org/ 648
+10.1002/2017JC013525), [Ferris et al., 2022](https://doi.org/10.1175/JPO-D-21-0015.1), [Miller et al., 2023](https://doi.org/10.1029/2022JC018901)'%}. 
+
+## The TKE budget under wave forcing compared to wind forcing
+<br><br>
+
+{% maincolumn 'assets/img/waves/TKE_budget.png' '“Nondimensional TKE budget at 0.1h (upper 10% of the boundary layer) plotted against the stability parameter, $$\zeta$$ a) No wave forcing and b) wave forcing", *Giddy et al., 2025, under review*'%}
+
+Under pure wind conditions, vertical shear accounts for the local dissipation of TKE. However, when waves are also included, the Eulerian vertical shear component is reduced and replaced with a Stokes shear component. We also see that the transport of TKE becomes non-negligible.
+
+## How this compares to observations
+
+When we compare a wind-driven shear only model for dissipation with a wind-wave model for dissipation we find similar fits (with a slight improvement when using the wind-wave model). This finding suggests that due to compensating effects and non-local dissipation (as seen in the TKE budget), observations may indeed agree with a wind-driven shear only model (e.g. the Law of the wall), but this model does not represent the underlying physics. <br><br>
+
+{% maincolumn 'assets/img/waves/obs_models.png' '“Observed dissipation compared to two models. Left, the Law of the Wall and right, a modified Law of the Wall including: a linear decay of momentum stress, the interaction between stokes drift and the wind-driven Eulerian current and a turbulent transport term", *Giddy et al., 2025, under review*'%}
+
+
+*This paper is currently under review with the Journal of Physical Oceanography*
+
+
+<!-- 
+Some edge cases and cautionary examples on using Markdown for writing content using this theme. In particular, list syntax can really knot things up. -->
+
+
+<!-- 
 ### Mathjax improperly parsing greater and less than and ampersands inside blocks
 
 The mathjax HTML ```<head>``` scripts have been modified to properly render block style mathjax expressions inside a ```$$ ... $$``` set of character pairs,
@@ -167,4 +204,4 @@ Example of the proper way to write an url inside a *Liquid* full-width image tag
 This code: ```{{ '{% fullwidth "assets/img/rhino.png" "Tuftes pet rhino (via <a href=\"//www.edwardtufte.com/tufte/\">Edward Tufte</a>)" ' }} %}```
 
 produces the following image with a title. Notice that I have had to escape the double quotes in the HTML with a backslash. Also, the example above leaves out the single quote in 'Tufte's" because of the topsy-turvy way that you have to escape the escapes in code sections that are used for illustrative purposes in this text. Bottom line is that there are occasionally some odd interactions between the Markdown parser, custom *Liquid* tags and HTML.
-{% fullwidth "assets/img/rhino.png" "Tufte's pet rhino (via <a href=\"//www.edwardtufte.com/tufte/\">Edward Tufte</a>)" %}
+{% fullwidth "assets/img/rhino.png" "Tufte's pet rhino (via <a href=\"//www.edwardtufte.com/tufte/\">Edward Tufte</a>)" %} --> 
