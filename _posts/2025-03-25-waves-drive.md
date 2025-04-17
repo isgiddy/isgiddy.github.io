@@ -26,7 +26,7 @@ The presence of Langmuir turbulence tends to enhance turbulence in the ocean
 ## The TKE budget under wave forcing compared to wind forcing
 <br><br>
 
-{% maincolumn 'assets/img/waves/TKE_budget.png' '“Nondimensional TKE budget at 0.1h (upper 10% of the boundary layer) plotted against the stability parameter, $$\zeta$$ a) No wave forcing and b) wave forcing", *Giddy et al., 2025, under review*'%}
+{% maincolumn 'assets/img/waves/tke_budget.png' '“Nondimensional TKE budget at 0.1h (upper 10% of the boundary layer) plotted against the stability parameter, $$\zeta$$ a) No wave forcing and b) wave forcing", *Giddy et al., 2025, under review*'%}
 
 Under pure wind conditions, vertical shear accounts for the local dissipation of TKE. However, when waves are also included, the Eulerian vertical shear component is reduced and replaced with a Stokes shear component. We also see that the transport of TKE becomes non-negligible.
 
