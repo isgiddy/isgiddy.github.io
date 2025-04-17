@@ -1,6 +1,6 @@
 ---
 layout: full-width
-title: about
+title: about me
 order: 2
 ---
 

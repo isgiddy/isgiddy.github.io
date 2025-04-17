@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: full-width
 title: Teaching Notes
 permalink: /teaching/
 order: 4

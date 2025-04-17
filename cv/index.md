@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: full-width
 title: CV
 permalink: /cv/
 order: 5
