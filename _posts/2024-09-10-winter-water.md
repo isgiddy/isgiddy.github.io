@@ -26,8 +26,7 @@ $$
 F_H = K\frac{dT}{dz},
 $$ where $$K = 0.2\frac{\varepsilon}{N^2}$$.  
 
-
-
+<br><br>
 
 {% maincolumn 'assets/img/winter_water/giddy_transects.png' 'Giddy et al. 2023, “Transects of temperature, stratification and dissipation at 60°S” *Giddy et al. (2023). Vertical Convergence of Turbulent and Double-Diffusive Heat Flux Drives Warming
 and Erosion of Antarctic Winter Water in Summer. Journal of Physical Oceanography*'%}
@@ -37,10 +36,7 @@ and Erosion of Antarctic Winter Water in Summer. Journal of Physical Oceanograph
 By diagnosing the sources of shear production we attributed enhanced mixing at the base of the mixed layer to wind driven shear (using a first order Law of the wall approximation) and enhanced mixing at the base of the winter water layer to double diffusive convection (evidence of temperature steps). 
 
 Following with a heat budget, we conclude that the warming trend is attributable to turbulent fluxes of heat.   
-
-
-
-
+<br><br>
 
 
 {% maincolumn 'assets/img/winter_water/giddy_timeseries.png' 'Giddy et al. 2023, “Timeseries of temperature tendency” *Giddy et al. (2023). Vertical Convergence of Turbulent and Double-Diffusive Heat Flux Drives Warming
