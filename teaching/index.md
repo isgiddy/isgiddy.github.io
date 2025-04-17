@@ -1,6 +1,6 @@
 ---
 layout: full-width
-title: Teaching Notes
+title: Teaching
 permalink: /teaching/
 order: 4
 ---
