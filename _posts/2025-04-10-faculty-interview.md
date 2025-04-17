@@ -8,7 +8,7 @@ categories:
 
 I recently interviewed for a faculty position. It was my first interview of this style. Timing so worked out that I was 38 weeks pregnant. I got myself dressed up (mental power), went to university and spent three afternoons on zoom. The first message to self is that a womens pregnant self is strong :) 
 
-What drove me to apply for this position? A search for independence. The freedom to be creative. A position in which I could influence the powers that be. Whether this is a percieved ideal or reality I am not sure yet. 
+What drove me to apply for this position? A search for independence. The freedom to be creative. The potential to lead and create a scientific research group. The challenge. A position in which I could influence the powers that be. Whether this is a percieved ideal or reality I am not sure yet. 
 
 The whole process seemed to be a mix of the search committee trying to get to know me, know why I was applying to that particular university, what I would do, my teaching interests and philosophy, my approach to work. The actual work/research seemed less important. 
 
@@ -30,6 +30,8 @@ A leader who can bring others to be their true selves is something I really admi
 *Why do you do what you do?*   
 I am curious. I am good at it, so it is rewarding. I value deeply the freedom of thought.   
 
-What was most challenging? I think the performance. Being professional while being genuine. A smaller challenge was figuring out what questions to ask. 
+For others out there going to do their first this-type interview, I got some good advice that I'll share here. They center around two points. You. Think about your narrative. How your past informs your future. What are the big questions you want to address. What you can change and improve in the place where you are applying. And the implementation. I.e. The funding plan. I think the main focus, after doing the interview is really the *you* part. 
+
+What was most challenging? I think the performance. Being professional while being genuine. 
 
 What was most rewarding? Being seen. Putting time in to reflect on my path to this point and imagine what I would do with such an opportunity.
