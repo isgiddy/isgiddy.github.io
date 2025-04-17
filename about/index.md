@@ -23,8 +23,5 @@ This is a great method. But just doing careful, logical science is not enough. W
 Science is what I spend most of my time doing, but I live in society. And in society we are part of our politics. I aim to engender good scientific practices to move forward our knowledge and innovation, while acknowledging and engaging with the contemporary challenges that we all face. Such as issues relating to climate, adaptation and resilience, geopolitics and culture.     
 
 
-
-
-
-
-
+<br>
+{% fullwidth 'assets/img/collaborators.png' "" %}
