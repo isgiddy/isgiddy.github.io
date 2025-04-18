@@ -6,7 +6,7 @@ order: 2
 
 Hi,   
 
-I am a physical oceanographer who is curious about how winds and waves drive mixing in the ocean surface boundary layer.   
+I am a physical oceanographer curious about how winds and waves drive mixing in the ocean surface boundary layer.   
 
 {% newthought "Interesting things happen at boundaries."%} At the air-sea interface, communication between the atmosphere and ocean takes place through turbulence. This turbulence modulates the exchange of momentum, heat, carbon, and other scalars, which in turn regulates our climate and the planets energetic balance.   
 
