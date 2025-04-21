@@ -1,22 +1,33 @@
 <header>
 	<nav class="group">
+	  <!-- Logo / Home link -->
 	  <a href="{{site.baseurl}}/">
 		<img class="badge" src="{{site.baseurl}}/assets/img/profile_pic.jpg" alt="CH">
 	  </a>
   
-	  {% assign ordered_pages = site.pages | sort: "order" %}
-	  {% for nav_page in ordered_pages %}
-		{% unless nav_page.nav_exclude %}
-		  {% if nav_page.title and nav_page.order %}
-			<a 
-			  href="{{ nav_page.url | prepend: site.baseurl }}" 
-			  class="{% if page.url == nav_page.url %}active{% endif %}">
-			  {{ nav_page.title }}
-			</a>
-		  {% endif %}
-		{% endunless %}
-	  {% endfor %}
-
+	  <!-- Burger Button -->
+	  <a id="togglemenu" onclick="document.body.classList.toggle('menuopen');" aria-label="Toggle navigation" tabindex="0">
+		<span class="burger">
+		  <span></span>
+		  <span></span>
+		  <span></span>
+		</span>
+	  </a>
+  
+	  <!-- Navigation Links -->
+	  <div id="menu">
+		{% assign ordered_pages = site.pages | sort: "order" %}
+		{% for nav_page in ordered_pages %}
+		  {% unless nav_page.nav_exclude %}
+			{% if nav_page.title and nav_page.order %}
+			  <a 
+				href="{{ nav_page.url | prepend: site.baseurl }}" 
+				class="{% if page.url == nav_page.url %}active{% endif %}">
+				{{ nav_page.title }}
+			  </a>
+			{% endif %}
+		  {% endunless %}
+		{% endfor %}
+	  </div>
 	</nav>
   </header>
-  
