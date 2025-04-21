@@ -685,6 +685,9 @@ hr.slender {
     display: flex;
   }
   .group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distributes logo left, burger right */
     position: relative;
   }
 }
