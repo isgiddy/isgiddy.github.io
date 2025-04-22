@@ -396,15 +396,16 @@ header > nav a {
   color: $contrast-color;
   text-decoration: none;
   // margin: 0;
-  margin-left: 3.5rem;
+  margin-left: 1rem;
+  margin-right: 2rem;
   vertical-align: baseline;
 }
 
 header > nav a > img.badge {
-  margin: 1rem 1rem 1rem 2rem; // top right bottom left
-  height: 4.5rem; // optional: control logo size
+  margin: 1rem 1rem 1rem 0.5rem; // top right bottom left
+  height: 4.5rem;
   width: auto;
-  vertical-align: middle; // keeps it nicely aligned
+  vertical-align: middle;
 }
 
 // header > nav  a{
