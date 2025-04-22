@@ -5,7 +5,7 @@ permalink: /musings/
 order: 3
 ---
 
-<h1 class="content-listing-header sans"></h1>
+<h1 class="content-listing-header sans">topics of interest</h1>
 <ul class="content-listing">
   {% for post in site.posts %}
     {% if post.categories contains "musings" %}
