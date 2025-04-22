@@ -380,22 +380,50 @@ header > nav.group, body footer {
 nav.group a.active:before{ content:"\0003c\000a0";} // escaped unicode for the carats and then a space on active menu links
 nav.group a.active:after{ content:"\000a0\0003e" ;}
 
-header > nav  a{
+header > nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  padding-right: 2rem;
+  padding-top: 1.5rem
+}
+
+header > nav a {
   font-size: 1.2rem;
   font-family: $sans-font;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: $contrast-color;
-  padding-top: 1.5rem;
   text-decoration: none;
-  display: inline-block;
-  float: left;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-right: 2rem;
-  //margin-left: 1rem;
+  // margin: 0;
+  margin-left: 3.5rem;
   vertical-align: baseline;
 }
+
+header > nav a > img.badge {
+  margin: 1rem 1rem 1rem 2rem; // top right bottom left
+  height: 4.5rem; // optional: control logo size
+  width: auto;
+  vertical-align: middle; // keeps it nicely aligned
+}
+
+// header > nav  a{
+//   font-size: 1.2rem;
+//   font-family: $sans-font;
+//   letter-spacing: 0.15em;
+//   text-transform: uppercase;
+//   color: $contrast-color;
+//   padding-top: 1.5rem;
+//   text-decoration: none;
+//   display: inline-block;
+//   float: left;
+//   margin-top: 0;
+//   margin-bottom: 0;
+//   padding-right: 2rem;
+//   //margin-left: 1rem;
+//   vertical-align: baseline;
+// }
+
 header > nav a img{
   height: 5rem;
   position: relative;
@@ -672,24 +700,30 @@ hr.slender {
   #menu {
     display: none;
     flex-direction: column;
-    background: #fff;
+    background: #fffff8;
     position: absolute;
     top: 60px; /* adjust as needed */
-    right: 0;
-    left: 0;
+    right: 1rem;  
+    // left: 0;
+    min-width: 160px;
+    max-width: 240px;
     z-index: 1000;
     padding: 1rem;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    align-items: flex-end; // << aligns items (links) to the right
+    text-align: right;     // << aligns text inside the links to the right
+  }
   }
   .menuopen #menu {
     display: flex;
   }
+  
   .group {
-    display: flex;
-    align-items: center;
+    // display: flex;
+    // align-items: right;
     justify-content: space-between; /* Distributes logo left, burger right */
     position: relative;
   }
-}
+
 
 
