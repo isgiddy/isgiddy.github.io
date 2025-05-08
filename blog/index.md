@@ -1,7 +1,7 @@
 ---
 layout: full-width
-title: Musings
-permalink: /musings/
+title: Blog
+permalink: /blog/
 order: 3
 ---
 
