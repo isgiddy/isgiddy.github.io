@@ -217,9 +217,18 @@ figure.banner {
 figure.banner img {
   display: block;
   width: 100%;
-  height: 9rem;
+  height: auto;
+  min-height: 6rem;
   object-fit: cover;
-  border-radius: 6px;
+}
+figcaption.banner-caption {
+  float: none;
+  max-width: none;
+  margin: 0.4rem 0 0;
+  font-family: $sans-font;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: $ink-soft;
 }
 
 // ---- Home sections ---------------------------------------------------------
@@ -436,5 +445,4 @@ footer .credits {
   ul.interest-grid { grid-template-columns: 1fr; }
   .cv-entry { grid-template-columns: 1fr; gap: 0.2rem; }
   li.pub { grid-template-columns: 1fr; gap: 0.2rem; }
-  figure.banner img { height: 6rem; }
 }
