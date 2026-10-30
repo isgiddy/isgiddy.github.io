@@ -1,0 +1,9 @@
+{% assign p = include.pub %}
+<li class="pub">
+  <span class="pub-year">{{ p.year }}</span>
+  <div class="pub-body">
+    <a class="pub-title" href="https://doi.org/{{ p.doi }}">{{ p.title }}</a>
+    <span class="pub-authors">{% for a in p.authors %}{% if a contains "Giddy" %}<strong>{{ a }}</strong>{% else %}{{ a }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}</span>
+    <span class="pub-venue"><em>{{ p.journal }}</em> · <a href="https://doi.org/{{ p.doi }}">doi:{{ p.doi }}</a></span>
+  </div>
+</li>

@@ -1,4 +1,6 @@
-- link: //github.com/isgiddy
+- name: GitHub
+  link: https://github.com/isgiddy
   icon: icon-github
-- link: //www.linkedin.com/in/isabelle-giddy
+- name: LinkedIn
+  link: https://www.linkedin.com/in/isabelle-giddy
   icon: icon-linkedin

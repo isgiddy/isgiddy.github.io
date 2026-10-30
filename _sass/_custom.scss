@@ -1,0 +1,440 @@
+// ---------------------------------------------------------------------------
+// Site refresh: keeps the Tufte typography and cream paper, adds a calmer
+// header, a homepage hero, card listings and a tidier CV.
+// ---------------------------------------------------------------------------
+
+$ocean: $contrast-color;          // #1c6585
+$ocean-deep: #12465d;
+$ocean-wash: #e6eff2;
+$glider: #f2c230;                 // the yellow of the glider, used sparingly
+$ink-soft: #4a4a45;
+$rule: rgba(0, 0, 0, 0.12);
+$content-max: 68rem;
+
+// ---- Page frame ------------------------------------------------------------
+body.full-width {
+  width: auto;
+  max-width: none;
+  padding: 0 5%;
+}
+body.full-width > article,
+body.full-width > header > nav,
+body.full-width > footer {
+  max-width: $content-max;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// ---- Header ----------------------------------------------------------------
+header.site-header > nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: auto;
+  padding: 1.6rem 0 1.2rem;
+  border-bottom: 1px solid $rule;
+}
+body:not(.full-width) header.site-header > nav { width: 87.5%; }
+
+header.site-header nav a { margin: 0; }
+
+header.site-header a.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+  letter-spacing: 0.08em;
+  color: $text-color;
+}
+header.site-header a.brand img.badge,
+header.site-header nav a img {
+  position: static;
+  top: auto;
+  height: 3.2rem;
+  width: 3.2rem;
+  margin: 0;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 0 2px $bg-color, 0 0 0 3px $glider;
+}
+.brand-name {
+  font-family: $sans-font;
+  font-size: 1.15rem;
+  text-transform: uppercase;
+}
+
+#menu { display: flex; gap: 2.2rem; align-items: center; }
+#menu a {
+  position: relative;
+  font-size: 1rem;
+  letter-spacing: 0.14em;
+  padding: 0.3rem 0;
+  color: $ink-soft;
+  transition: color 0.15s ease;
+}
+#menu a:hover { color: $ocean; }
+nav.group a.active:before, nav.group a.active:after { content: none; }
+#menu a.active { color: $ocean; }
+#menu a.active::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -0.15rem;
+  height: 2px;
+  background: $glider;
+  border-radius: 2px;
+}
+
+@media (max-width: 55rem) {
+  #menu {
+    display: none;
+    gap: 0.4rem;
+    top: 4.8rem;
+    border: 1px solid $rule;
+    border-radius: 6px;
+  }
+  .menuopen #menu { display: flex; }
+  #menu a { font-size: 1.15rem; padding: 0.5rem 0; }
+  #menu a.active::after { left: auto; width: 1.5rem; }
+}
+@media (max-width: 30rem) { .brand-name { display: none; } }
+
+// ---- Shared bits -----------------------------------------------------------
+.kicker, .section-label, .post-meta, .post-kicker, .feature-kicker, .cv-when {
+  font-family: $sans-font;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.85rem;
+  color: $ocean;
+  font-style: normal;
+}
+.kicker { margin: 0 0 0.6rem; width: auto; }
+
+h2.section-label {
+  font-weight: 700;
+  margin: 0 0 1.4rem;
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+h2.section-label::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: $rule;
+}
+
+.btn {
+  display: inline-block;
+  font-family: $sans-font;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  padding: 0.65rem 1.2rem;
+  border: 1px solid $ocean;
+  border-radius: 999px;
+  color: $ocean;
+  background: transparent;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.btn:hover { background: $ocean-wash; }
+.btn-primary { background: $ocean; color: #fff; }
+.btn-primary:hover { background: $ocean-deep; }
+
+// ---- Homepage hero ---------------------------------------------------------
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: 3rem;
+  align-items: center;
+  padding: 3rem 0 2rem;
+}
+.full-width article .hero p { width: auto; padding-right: 0; }
+h1.hero-name {
+  font-size: 4rem;
+  line-height: 1;
+  margin: 0 0 0.8rem;
+  letter-spacing: -0.01em;
+}
+.full-width article p.hero-tagline {
+  font-family: $sans-font;
+  font-size: 1.1rem;
+  color: $ink-soft;
+  margin: 0 0 1.6rem;
+  letter-spacing: 0.02em;
+}
+.full-width article p.hero-intro {
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  margin: 0 0 1rem;
+  max-width: 34em;
+}
+.full-width article p.hero-aside { color: $ocean; margin-bottom: 1.8rem; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; }
+
+.hero-photo {
+  position: relative;
+  margin: 0;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.hero-photo::before {   // soft ocean disc behind the cut-out photo
+  content: "";
+  position: absolute;
+  width: 88%;
+  aspect-ratio: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -46%);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255,255,255,0.55), rgba(255,255,255,0) 55%),
+    linear-gradient(160deg, #cfe2e8 0%, #8fb7c6 55%, $ocean 100%);
+}
+.hero-photo::after {    // a small glider-yellow accent
+  content: "";
+  position: absolute;
+  width: 14%;
+  aspect-ratio: 1;
+  right: 4%;
+  top: 6%;
+  border-radius: 50%;
+  background: $glider;
+  opacity: 0.9;
+}
+.hero-photo img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 24rem;
+  height: auto;
+}
+
+// ---- Banner ----------------------------------------------------------------
+figure.banner {
+  margin: 1rem 0 3.5rem;
+  max-width: 100%;
+}
+figure.banner img {
+  display: block;
+  width: 100%;
+  height: 9rem;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+// ---- Home sections ---------------------------------------------------------
+.home-section { margin: 0 0 3.5rem; }
+
+ul.interest-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.2rem;
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+ul.interest-grid li {
+  margin: 0;
+  padding: 1.2rem 1.2rem 1.3rem;
+  border-top: 3px solid $ocean;
+  background: rgba(28, 101, 133, 0.045);
+  border-radius: 0 0 6px 6px;
+  line-height: 1.5;
+}
+.interest-title {
+  display: block;
+  font-family: $sans-font;
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: 0.4rem;
+}
+.interest-text { display: block; font-size: 1.15rem; color: $ink-soft; }
+
+// ---- Post cards ------------------------------------------------------------
+ul.post-list {
+  list-style: none;
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+li.post-card { margin: 0; padding: 0; }
+li.post-card a {
+  display: block;
+  padding: 1.3rem 0 1.4rem;
+  border-bottom: 1px solid $rule;
+  color: $text-color;
+}
+li.post-card:first-child a { padding-top: 0.2rem; }
+h3.post-title {
+  margin: 0.35rem 0 0.5rem;
+  font-size: 1.75rem;
+  line-height: 1.25;
+  color: $ocean;
+  transition: color 0.15s ease;
+}
+li.post-card a:hover h3.post-title { color: $ocean-deep; text-decoration: underline; text-decoration-color: $glider; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.post-excerpt { display: block; font-size: 1.3rem; line-height: 1.9rem; color: $ink-soft; max-width: 46em; }
+
+.full-width article p.more-link { margin-top: 1.2rem; font-family: $sans-font; font-size: 1rem; }
+.full-width article p.more-link a, p.post-back a { color: $ocean; background: none; text-shadow: none; }
+
+// ---- Inner page headers ----------------------------------------------------
+header.page-header { padding: 3rem 0 2rem; }
+h1.page-title { font-size: 3.2rem; line-height: 1.1; margin: 0 0 1rem; }
+.full-width article p.page-lede {
+  font-size: 1.6rem;
+  line-height: 2.3rem;
+  font-style: italic;
+  color: $ink-soft;
+  margin: 0;
+  max-width: 36em;
+}
+
+// About prose: comfortable reading measure
+.full-width article .prose p { width: auto; max-width: 38em; }
+.full-width article .prose code { font-size: 1.1rem; }
+blockquote.pull-quote {
+  margin: 2.5rem 0;
+  max-width: 38em;
+  padding-left: 1.5rem;
+  border-left: 3px solid $glider;
+}
+.full-width article blockquote.pull-quote p {
+  width: auto;
+  padding: 0;
+  font-size: 2rem;
+  line-height: 1.3;
+  font-style: italic;
+  color: $ocean;
+  margin: 0;
+}
+figure.logo-strip { max-width: 100%; margin: 0; }
+.prose + .home-section, .pull-quote + .prose + .home-section { margin-top: 3.5rem; }
+figure.logo-strip img { width: 100%; height: auto; }
+
+// Teaching feature card
+a.feature-card {
+  display: block;
+  max-width: 40rem;
+  padding: 1.8rem 2rem;
+  border: 1px solid $rule;
+  border-left: 4px solid $ocean;
+  border-radius: 6px;
+  color: $text-color;
+  background: #fff;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+a.feature-card:hover { box-shadow: 0 6px 20px rgba(18, 70, 93, 0.1); transform: translateY(-1px); }
+.feature-title { display: block; font-size: 2rem; margin: 0.4rem 0 0.6rem; color: $ocean; }
+.feature-text { display: block; font-size: 1.3rem; line-height: 1.9rem; color: $ink-soft; }
+.feature-cta { display: inline-block; margin-top: 1rem; font-family: $sans-font; color: $ocean; }
+
+// ---- CV --------------------------------------------------------------------
+.cv-section { margin: 0 0 2.8rem; max-width: 48rem; }
+.cv-entry {
+  display: grid;
+  grid-template-columns: 9rem minmax(0, 1fr);
+  gap: 1.5rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid $rule;
+}
+.cv-entry:last-child { border-bottom: none; }
+.cv-when { padding-top: 0.35rem; color: $ink-soft; }
+.cv-title { display: block; font-size: 1.45rem; line-height: 1.4; }
+.cv-where { display: block; font-size: 1.2rem; font-style: italic; color: $ink-soft; margin-top: 0.2rem; }
+
+ul.tag-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  width: auto;
+  padding: 0;
+}
+ul.tag-list li {
+  margin: 0;
+  padding: 0.4rem 1rem;
+  font-family: $sans-font;
+  font-size: 1rem;
+  line-height: 1.4;
+  border-radius: 999px;
+  background: $ocean-wash;
+  color: $ocean-deep;
+}
+
+// ---- Posts -----------------------------------------------------------------
+p.post-kicker { margin: 2.5rem 0 0; }
+p.post-kicker a { color: $ocean; }
+p.post-back { margin: 3rem 0 1rem; font-family: $sans-font; font-size: 1.05rem; }
+
+// ---- Publications ----------------------------------------------------------
+ul.pub-list { list-style: none; width: auto; margin: 0; padding: 0; max-width: 52rem; }
+li.pub {
+  display: grid;
+  grid-template-columns: 4.5rem minmax(0, 1fr);
+  gap: 1.2rem;
+  margin: 0;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid $rule;
+  line-height: 1.5;
+}
+li.pub:last-child { border-bottom: none; }
+.pub-year { font-family: $sans-font; font-size: 0.95rem; letter-spacing: 0.08em; color: $ink-soft; padding-top: 0.3rem; }
+a.pub-title { display: block; font-size: 1.45rem; line-height: 1.35; color: $ocean; }
+a.pub-title:hover { color: $ocean-deep; text-decoration: underline; text-decoration-color: $glider; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.pub-authors { display: block; font-size: 1.15rem; color: $ink-soft; margin-top: 0.35rem; }
+.pub-authors strong { color: $text-color; font-weight: 700; }
+.pub-venue { display: block; font-family: $sans-font; font-size: 0.95rem; color: $ink-soft; margin-top: 0.3rem; }
+.pub-venue a { color: $ink-soft; }
+.pub-venue a:hover { color: $ocean; }
+.cv-section ul.pub-list { max-width: none; }
+.page-lede a { color: $ocean; background: none; text-shadow: none; }
+
+// ---- Footer ----------------------------------------------------------------
+footer.site-footer {
+  width: auto;
+  margin-top: 4rem;
+  padding: 2rem 0 2.5rem;
+  border-top: 1px solid $rule;
+  font-family: $sans-font;
+}
+body:not(.full-width) footer.site-footer { width: 87.5%; }
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.footer-name { display: block; text-transform: uppercase; letter-spacing: 0.12em; font-size: 1rem; }
+.footer-tag { display: block; font-size: 0.95rem; color: $ink-soft; margin-top: 0.25rem; }
+ul.footer-links { margin: 0; padding: 0; width: auto; display: flex; gap: 1rem; font-size: 1.5rem; }
+ul.footer-links li { padding: 0; margin: 0; }
+ul.footer-links a { color: $ocean; transition: color 0.15s ease; }
+ul.footer-links a:hover { color: $ocean-deep; }
+footer .credits {
+  text-align: left;
+  margin: 1.4rem 0 0;
+  padding: 0;
+  font-size: 0.85rem;
+  color: #777;
+}
+.credit-sep { margin: 0 0.5rem; }
+
+// ---- Responsive ------------------------------------------------------------
+@media (max-width: 60rem) {
+  ul.interest-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 45rem) {
+  .hero { grid-template-columns: 1fr; gap: 1.5rem; padding-top: 2rem; }
+  .hero-photo { order: -1; padding: 0.5rem 0 1.5rem; }
+  .hero-photo::before { width: 72%; transform: translate(-50%, -50%); }
+  .hero-photo::after { right: 12%; }
+  .hero-photo img { max-width: 15rem; }
+  h1.hero-name { font-size: 3.2rem; }
+  ul.interest-grid { grid-template-columns: 1fr; }
+  .cv-entry { grid-template-columns: 1fr; gap: 0.2rem; }
+  li.pub { grid-template-columns: 1fr; gap: 0.2rem; }
+  figure.banner img { height: 6rem; }
+}

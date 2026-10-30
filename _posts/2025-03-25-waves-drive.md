@@ -20,13 +20,12 @@ The schematic below gives an idea of how Langmuir Cells are formed when vertical
 {% maincolumn 'assets/img/waves/formation_of_langmuir_cells.png' '“Schematic depicting the interaction between winds and waves and the formation of Langmuir cells and Langmuir turbulence, Isabelle Giddy”'%}
 
 The presence of Langmuir turbulence tends to enhance turbulence in the ocean 
-{% sidenote 'three' '[Mcwilliams et al, 1997](https://doi.org/10.1017/S0022112096004375), [DAsaro et al., 2014](https://doi.org/10.1002/2013GL058193)'%} when winds and waves are aligned, thus being an important component of the energetic balance in the surface boundary layer. However, this enhanced turbulence is not always observed. A number of studies show that predictions of turbulence dissipation based on a shear production model that only takes into account wind stress well-represents observations, with wave adjusted models at times explaining less of the variability {% sidenote 'four' '[Esters et al., 2018](https://doi.org/ 648
-10.1002/2017JC013525), [Ferris et al., 2022](https://doi.org/10.1175/JPO-D-21-0015.1), [Miller et al., 2023](https://doi.org/10.1029/2022JC018901)'%}. 
+{% sidenote 'three' '[Mcwilliams et al, 1997](https://doi.org/10.1017/S0022112096004375), [DAsaro et al., 2014](https://doi.org/10.1002/2013GL058193)'%} when winds and waves are aligned, thus being an important component of the energetic balance in the surface boundary layer. However, this enhanced turbulence is not always observed. A number of studies show that predictions of turbulence dissipation based on a shear production model that only takes into account wind stress well-represents observations, with wave adjusted models at times explaining less of the variability {% sidenote 'four' '[Esters et al., 2018](https://doi.org/10.1002/2017JC013525), [Ferris et al., 2022](https://doi.org/10.1175/JPO-D-21-0015.1), [Miller et al., 2023](https://doi.org/10.1029/2022JC018901)'%}. 
 
 ## The TKE budget under wave forcing compared to wind forcing
 <br>
 
-{% maincolumn 'assets/img/waves/tke_budget.png' '“Nondimensional TKE budget at 0.1h (upper 10% of the boundary layer) plotted against the stability parameter, $$\zeta$$ a) No wave forcing and b) wave forcing", *Giddy et al., 2025, under review*' %}
+{% maincolumn 'assets/img/waves/tke_budget.png' '“Nondimensional TKE budget at 0.1h (upper 10% of the boundary layer) plotted against the stability parameter, $$\zeta$$ a) No wave forcing and b) wave forcing", *Giddy et al., 2026, Journal of Physical Oceanography*' %}
 
 Under pure wind conditions, vertical shear accounts for the local dissipation of TKE. However, when waves are also included, the Eulerian vertical shear component is reduced and replaced with a Stokes shear component. We also see that the transport of TKE becomes non-negligible.
 
@@ -34,10 +33,10 @@ Under pure wind conditions, vertical shear accounts for the local dissipation of
 
 When we compare a wind-driven shear only model for dissipation with a wind-wave model for dissipation we find similar fits (with a slight improvement when using the wind-wave model). This finding suggests that due to compensating effects and non-local dissipation (as seen in the TKE budget), observations may indeed agree with a wind-driven shear only model (e.g. the Law of the wall), but this model does not represent the underlying physics. <br><br>
 
-{% maincolumn 'assets/img/waves/obs_models.png' '“Observed dissipation compared to two models. Left, the Law of the Wall and right, a modified Law of the Wall including: a linear decay of momentum stress, the interaction between stokes drift and the wind-driven Eulerian current and a turbulent transport term", *Giddy et al., 2025, under review*'%}
+{% maincolumn 'assets/img/waves/obs_models.png' '“Observed dissipation compared to two models. Left, the Law of the Wall and right, a modified Law of the Wall including: a linear decay of momentum stress, the interaction between stokes drift and the wind-driven Eulerian current and a turbulent transport term", *Giddy et al., 2026, Journal of Physical Oceanography*'%}
 
 
-*This paper is currently under review with the Journal of Physical Oceanography*
+*This work is now published:* Giddy, I., Whitt, D., Fer, I., Swart, S., Breivik, Ø. & Nicholson, S.A. (2026). Waves explain observed similarity scaling of turbulence dissipation in the Southern Ocean. *Journal of Physical Oceanography*. [doi:10.1175/JPO-D-25-0076.1](https://doi.org/10.1175/JPO-D-25-0076.1)
 
 
 <!-- 

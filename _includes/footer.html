@@ -1,15 +1,19 @@
-<footer>
-  <hr class="slender">
-  <ul class="footer-links">
-    <!-- <li><a href="mailto:hate@spam.net"><span class="icon-mail3"></span></a></li>     -->
-    {% for entry in site.data.social %}
-      <li>
-        <a href="{{ entry.link }}"><span class="{{ entry.icon }}"></span></a>
-      </li>
-    {% endfor %}  
-  </ul>
-<div class="credits">
-<span>&copy; {{ site.time | date: '%Y' }} &nbsp;&nbsp;{{site.author | upcase }}</span></br> <br>
-<span>This site was created with the <a href="//github.com/clayh53/tufte-jekyll">Tufte theme {{site.subtitle}} </a> in <a href="//jekyllrb.com">Jekyll</a>.</span> 
-</div>  
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-about">
+      <span class="footer-name">Isabelle Giddy</span>
+      <span class="footer-tag">Senior Researcher · Southern Ocean Carbon-Climate Observatory, CSIR</span>
+    </div>
+    <ul class="footer-links">
+      {% for entry in site.data.social %}
+        <li><a href="{{ entry.link }}" aria-label="{{ entry.name }}" title="{{ entry.name }}"><span class="{{ entry.icon }}"></span></a></li>
+      {% endfor %}
+      <li><a href="{{ '/feed.xml' | relative_url }}" aria-label="RSS feed" title="RSS feed"><span class="icon-rss2"></span></a></li>
+    </ul>
+  </div>
+  <div class="credits">
+    <span>&copy; {{ site.time | date: '%Y' }} Isabelle Giddy</span>
+    <span class="credit-sep">·</span>
+    <span>Built with <a href="https://github.com/clayh53/tufte-jekyll">Tufte Jekyll</a></span>
+  </div>
 </footer>

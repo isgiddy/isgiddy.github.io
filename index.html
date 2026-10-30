@@ -1,33 +1,76 @@
 ---
 layout: full-width
-title: home
+title: Home
 order: 1
-# Note that this index page uses a full-width layout!
 ---
 
-<h1 class="content-listing-header sans" style="text-align: center;">Isabelle Giddy</h1>
-<h4 class="content-listing-header sans" style="text-align: center;">ocean turbulence, observational oceanography, earth system science</h4>
+<section class="hero">
+  <div class="hero-text">
+    <p class="kicker">Senior Researcher · SOCCO, CSIR · South Africa</p>
+    <h1 class="hero-name">Isabelle Giddy</h1>
+    <p class="hero-tagline">Ocean turbulence · observational oceanography · earth system science</p>
+    <p class="hero-intro">
+      I'm curious about how winds and waves stir the upper ocean. I chase turbulence at the
+      air–sea boundary with autonomous gliders and surface robots, then use models and theory
+      to understand what that mixing means for heat, carbon and our climate.
+    </p>
+    <p class="hero-intro hero-aside"><em>Interesting things happen at boundaries.</em></p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="{{ '/about/' | relative_url }}">More about me</a>
+      <a class="btn" href="{{ '/cv/' | relative_url }}">CV</a>
+      <a class="btn" href="https://isgiddy.github.io/intro_to_turbulence/intro.html">Turbulence Jupyter Book</a>
+    </div>
+  </div>
+  <figure class="hero-photo">
+    <picture>
+      <source srcset="{{ '/assets/img/isabelle_glider.webp' | relative_url }}" type="image/webp">
+      <img src="{{ '/assets/img/isabelle_glider.png' | relative_url }}" alt="Isabelle crouching next to a yellow ocean glider on its trolley, with her toddler sitting on the glider" width="583" height="870">
+    </picture>
+  </figure>
+</section>
 
-<!-- Full-width image -->
-<div style="margin: 1rem 0;">
-  <img src="{{ '/assets/img/research-banner.png' | relative_url }}" alt="Research banner" style="width: 100%; height: auto; display: block;">
-</div>
+<figure class="banner">
+  <img src="{{ '/assets/img/research-banner.jpg' | relative_url }}" alt="Swirling ocean currents (NASA Perpetual Ocean visualisation)">
+</figure>
 
-<ul class="content-listing">
-  {% for post in site.posts %}
-    {% if post.categories contains "research" %}
-      <li class="listing">
-        <hr class="slender">
-        <a href="{{ post.url | relative_url }}">
-          <h3 class="contrast">{{ post.title }}</h3>
-        </a>
-        <br>
-        <span class="smaller">{{ post.date | date: "%B %-d, %Y" }}</span><br/>
-        <div>{{post.excerpt | strip_html | truncatewords: 20 }}
-        </div>
-      </li>
-    {% endif %}
-  {% endfor %}
-</ul>
+<section class="home-section">
+  <h2 class="section-label">Research interests</h2>
+  <ul class="interest-grid">
+    <li><span class="interest-title">Air–sea interaction</span><span class="interest-text">How momentum, heat and carbon cross the ocean surface.</span></li>
+    <li><span class="interest-title">Boundary layer turbulence</span><span class="interest-text">Mixing in the ocean surface boundary layer, observed and modelled.</span></li>
+    <li><span class="interest-title">Wind–wave–current interactions</span><span class="interest-text">Stokes drift, Langmuir turbulence and wave-driven mixing.</span></li>
+    <li><span class="interest-title">Autonomous ocean observing</span><span class="interest-text">Gliders and surface robots that measure turbulence where ships rarely go.</span></li>
+  </ul>
+</section>
 
+<section class="home-section">
+  <h2 class="section-label">Latest papers</h2>
+  <ul class="pub-list">
+    {% for pub in site.data.publications limit:3 %}
+      {% include publication.html pub=pub %}
+    {% endfor %}
+  </ul>
+  <p class="more-link"><a href="{{ '/publications/' | relative_url }}">All publications →</a></p>
+</section>
 
+<section class="home-section">
+  <h2 class="section-label">Research notes</h2>
+  <ul class="post-list">
+    {% for post in site.posts %}
+      {% if post.categories contains "research" %}
+        {% include post-card.html post=post words=28 %}
+      {% endif %}
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="home-section">
+  <h2 class="section-label">From the blog</h2>
+  <ul class="post-list">
+    {% assign musings = site.posts | where_exp: "p", "p.categories contains 'musings'" %}
+    {% for post in musings limit:3 %}
+      {% include post-card.html post=post words=24 %}
+    {% endfor %}
+  </ul>
+  <p class="more-link"><a href="{{ '/blog/' | relative_url }}">All blog posts →</a></p>
+</section>

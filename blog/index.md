@@ -2,22 +2,19 @@
 layout: full-width
 title: Blog
 permalink: /blog/
-order: 3
+order: 4
 ---
 
-<h1 class="content-listing-header sans">topics of interest</h1>
-<ul class="content-listing">
+<header class="page-header">
+  <p class="kicker">Blog</p>
+  <h1 class="page-title">Topics of interest</h1>
+  <p class="page-lede">Notes on science, society and life as a scientist, written as I think them through.</p>
+</header>
+
+<ul class="post-list">
   {% for post in site.posts %}
     {% if post.categories contains "musings" %}
-      <li class="listing">
-        <hr class="slender">
-        <a href="{{ post.url | relative_url }}">
-          <h3 class="contrast">{{ post.title }}</h3>
-        </a>
-        <br>
-        <span class="smaller">{{ post.date | date: "%B %-d, %Y" }}</span><br/>
-        <div>{{ post.excerpt | strip_html | truncatewords: 40}}</div>
-      </li>
+      {% include post-card.html post=post words=40 %}
     {% endif %}
   {% endfor %}
 </ul>

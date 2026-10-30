@@ -1,0 +1,7 @@
+<li class="post-card">
+  <a href="{{ include.post.url | relative_url }}">
+    <span class="post-meta">{{ include.post.date | date: "%-d %B %Y" }}{% if include.post.categories contains "research" %} · Research{% elsif include.post.categories contains "musings" %} · Blog{% endif %}</span>
+    <h3 class="post-title">{{ include.post.title }}</h3>
+    <span class="post-excerpt">{{ include.post.excerpt | split: '<label' | first | strip_html | truncatewords: include.words }}</span>
+  </a>
+</li>
